@@ -1,5 +1,25 @@
-from src.module_a import square
+from src.module_a import square, concat
+import pytest
 
 def test_square():
     assert square(8) == 64
 # End of test_square
+
+def test_concat():
+    sA = "Hello! "
+    sB = "Joe!"
+
+    assert concat(sA, sB) == "Hello! Joe!"
+# End of test_concat
+
+def test_concat_failed():
+    sA = 555
+    sB = 777
+
+    """
+    Use `with` and `pytest.raises()` to expect the function `concat()` will issue `TypeError`.
+    """
+    with pytest.raises(TypeError):
+        concat(sA, sB)
+    # End of with-block
+# End of test_concat_failed
