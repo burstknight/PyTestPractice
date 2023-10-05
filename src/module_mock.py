@@ -1,4 +1,5 @@
 from datetime import datetime
+import time
 
 def getCurrentMoth() -> int:
     """
@@ -19,3 +20,23 @@ def getCurrentMoth() -> int:
 
     return iMonth
 # End of getCurrentMoth
+
+def sleepTime(iSecond: int) -> int:
+    """
+    Description:
+    =======================================================
+    Simulate to perform a long time function.
+
+    Args:
+    =======================================================
+    - iSecond: Give a number to sleep.
+
+    Returns:
+    =======================================================
+    - rtype: int, Return the sleeping time.
+    """
+    print("Ready for sleeping!")
+    time.sleep(iSecond)
+
+    return iSecond
+# End of sleepTime
